@@ -1,6 +1,8 @@
 <?php require_once __DIR__ . '/../../repositories/book-repository.php';  
 $pageTitle = "Manajemen Buku";
 $pageSubtitle = "Kelola data buku, kategori, dan penulis";
+
+$books = getBooks();
 ?>
 <!DOCTYPE html>
 <html lang="id">

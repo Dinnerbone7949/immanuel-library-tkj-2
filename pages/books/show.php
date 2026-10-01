@@ -13,6 +13,7 @@ $pageSubtitle = "Informasi lengkap buku beserta kategori dan penulis";
 <body>
   <?php
   require '../../repositories/book-repository.php';
+  $book = getBook();
   ?>
   <div class="app-shell">
     <?php include_once "../../components/Landing/sidebar.php"; ?>
