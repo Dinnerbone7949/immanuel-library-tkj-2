@@ -11,14 +11,6 @@ $pageSubtitle = "Perbarui data dan role pengguna";
   <link rel="stylesheet" href="../../styles/users/edit.css">
 </head>
 <body>
-  <?php
-  $user = [
-      "id"    => 2,
-      "name"  => "Budi Santoso",
-      "email" => "budi.santoso@siswa.ski.sch.id",
-      "role"  => "member",
-  ];
-  ?>
   <div class="app-shell">
     <?php include_once "../../components/Landing/sidebar.php"; ?>
 
