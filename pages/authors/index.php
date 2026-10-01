@@ -1,6 +1,6 @@
 <?php 
-$pagetitle = "Manajemen Penulis";
-$pagedescription = "Kelola data penulis yang terdaftar di sistem";
+$pageTitle = "Manajemen Penulis";
+$pageSubtitle = "Kelola data penulis yang terdaftar di sistem";
 ?>
 <!DOCTYPE html>
 <html lang="id">

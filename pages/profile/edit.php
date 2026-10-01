@@ -1,6 +1,6 @@
 <?php 
-$pagetitle = "Profil Saya";
-$pagedescription = "Kelola data akun dan profil Anda";
+$pageTitle = "Profil Saya";
+$pageSubtitle = "Kelola data akun dan profil Anda";
 ?>
 <!DOCTYPE html>
 <html lang="id">

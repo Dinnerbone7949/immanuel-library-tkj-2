@@ -1,6 +1,6 @@
 <?php 
-$pagetitle = "Edit Pengguna";
-$pagedescription = "Perbarui data dan role pengguna";
+$pageTitle = "Edit Pengguna";
+$pageSubtitle = "Perbarui data dan role pengguna";
 ?>
 <!DOCTYPE html>
 <html lang="id">

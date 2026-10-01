@@ -1,6 +1,6 @@
 <?php 
-$pagetitle = "Tambah Buku";
-$pagedescription = "Lengkapi data buku, kategori, dan penulis";
+$pageTitle = "Tambah Buku";
+$pageSubtitle = "Lengkapi data buku, kategori, dan penulis";
 ?>
 <!DOCTYPE html>
 <html lang="id">

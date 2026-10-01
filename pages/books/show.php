@@ -1,6 +1,6 @@
 <?php 
-$pagetitle = "Detail Buku";
-$pagedescription = "Informasi lengkap buku beserta kategori dan penulis";
+$pageTitle = "Detail Buku";
+$pageSubtitle = "Informasi lengkap buku beserta kategori dan penulis";
 ?>
 <!DOCTYPE html>
 <html lang="id">

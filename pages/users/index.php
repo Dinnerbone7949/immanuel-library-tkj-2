@@ -1,6 +1,6 @@
 <?php 
-$pagetitle = "Manajemen Pengguna";
-$pagedescription = "Daftar seluruh pengguna beserta perannya (role)";
+$pageTitle = "Manajemen Pengguna";
+$pageSubtitle = "Daftar seluruh pengguna beserta perannya (role)";
 ?>
 <!DOCTYPE html>
 <html lang="id">

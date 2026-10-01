@@ -1,6 +1,6 @@
 <?php 
-$pagetitle = "Manajemen Kategori";
-$pagedescription = "Kelola kategori untuk mengelompokkan buku";
+$pageTitle = "Manajemen Kategori";
+$pageSubtitle = "Kelola kategori untuk mengelompokkan buku";
 ?>
 <!DOCTYPE html>
 <html lang="id">

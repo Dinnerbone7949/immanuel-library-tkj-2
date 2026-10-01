@@ -1,6 +1,6 @@
 <?php 
-$pagetitle = "Edit Kategori";
-$pagedescription = "Perbarui data kategori";
+$pageTitle = "Edit Kategori";
+$pageSubtitle = "Perbarui data kategori";
 ?>
 <!DOCTYPE html>
 <html lang="id">
