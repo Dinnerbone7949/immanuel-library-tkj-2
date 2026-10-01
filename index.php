@@ -1,31 +1,21 @@
+<?php
+$title = "Beranda - Perpustakaan immanuel";
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beranda - Perpustakaan Digital</title>
+  <title>
+    <?= $title; ?>
+  </title>
   <link rel="stylesheet" href="styles/index.css">
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="/index.php" class="brand">
-        <span class="logo-badge">PD</span>
-        Perpustakaan Digital
-      </a>
-      <div class="nav-links">
-        <a href="/index.php" class="active">Beranda</a>
-        <a href="/pages/books/index.php">Katalog Buku</a>
-        <a href="/pages/authors/index.php">Penulis</a>
-      </div>
-      <div class="nav-actions">
-        <a href="/pages/auth/login.php" class="btn btn-outline btn-sm">Masuk</a>
-        <a href="/pages/auth/register.php" class="btn btn-primary btn-sm">Daftar</a>
-      </div>
-    </nav>
-  </header>
+  <?php require_once './components/Landing/header.php'; ?>
 
   <!-- ============ HERO ============ -->
   <section class="hero">
@@ -110,12 +100,8 @@
         <h3>Manajemen Pengguna</h3>
         <p>Setiap pengguna memiliki peran (admin/member) dan profil masing-masing.</p>
       </div>
-    </div>
+    </div>  
   </section>
-  <footer class="site-footer">
-    <span>&copy; 2026 Perpustakaan Digital - SMK Kristen Immanuel Pontianak</span>
-    <span>Dibangun dengan HTML, CSS &amp; PHP</span>
-  </footer>
+  <?php require_once 'components/Landing/footer.php'; ?>
 </body>
-
 </html>

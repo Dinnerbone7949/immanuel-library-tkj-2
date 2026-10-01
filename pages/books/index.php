@@ -1,3 +1,5 @@
+<?php require_once __DIR__ . '/../../repositories/book-repository.php'; ?>
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -9,16 +11,7 @@
 </head>
 
 <body>
-  <?php
-  $book = [
-    "id" => 1,
-    "title" => "Laskar Pelangi",
-    "category" => "Fiksi",
-    "year" => 2005,
-    "stock" => 12,
-    "authors" => "Andrea Hirata",
-  ];
-  ?>
+
   <div class="app-shell">
     <aside class="app-sidebar">
       <div class="brand">
@@ -110,31 +103,40 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>
-                  <div class="cell-primary">
-                    <span class="cell-thumb"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z" />
-                      </svg></span>
-                    <a href="show.php?id=<?= $book['id'] ?>" style="color:inherit;"><?= $book['title'] ?></a>
-                  </div>
-                </td>
-                <td><span class="badge badge-muted"><?= $book['category'] ?></span></td>
-                <td>
-                  <div class="chip-list">
-                    <span class="chip"><?= $book['authors'] ?></span>
-                  </div>
-                </td>
-                <td><?= $book['stock'] ?></td>
-                <td>
-                  <div class="cell-actions">
-                    <a href="edit.php?id=<?= $book['id'] ?>" class="btn btn-outline btn-sm">Edit</a>
-                    <a href="#" class="btn btn-danger btn-sm">Hapus</a>
-                  </div>
-                </td>
-              </tr>
+              <?php foreach($books as $index => $book):?>
+                <tr>
+                  <td>
+                    <div class="cell-primary">
+                      <span class="cell-thumb"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z" />
+                        </svg></span>
+                      <a href="show.php?id=<?= $book['id'] ?>" style="color:inherit;"><?= $book['title'] ?></a>
+                    </div>
+                  </td>
+                  <td><span class="badge badge-muted"><?= $book['category'] ?></span></td>
+                  <td>
+                    <div class="chip-list">
+                      <?php foreach($book['authors'] as $author):?>
+                        <span class="chip"><?= $author ?></span>
+                      <?php endforeach;?>
+                    </div>
+                  </td>
+                  <td><?= $book['stock'] ?></td>
+                  <td>
+                    <div class="cell-actions">
+                      <a href="edit.php?id=<?= $book['id'] ?>" class="btn btn-outline btn-sm">Edit</a>
+                      <a href="#" class="btn btn-danger btn-sm">Hapus</a>
+                    </div>
+                  </td>
+                </tr>
+              <?php endforeach ?>
+              <?php if (count($books) === 0): ?>
+                <tr>
+                  <td colspan="5" style="text-align:center;">Tidak ada data buku yang ditemukan.</td>
+                </tr>
+              <?php endif; ?>
             </tbody>
           </table>
         </div>
