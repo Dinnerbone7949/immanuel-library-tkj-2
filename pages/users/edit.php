@@ -1,6 +1,8 @@
 <?php 
 $pageTitle = "Edit Pengguna";
 $pageSubtitle = "Perbarui data dan role pengguna";
+require_once "../../repositories/user-repository.php";
+$user = getUser();
 ?>
 <!DOCTYPE html>
 <html lang="id">
