@@ -1,6 +1,8 @@
 <?php 
 $pageTitle = "Edit Penulis";
 $pageSubtitle = "Perbarui data penulis";
+require_once "../../repositories/author-repository.php";
+$author = getAuthor();
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -13,13 +15,6 @@ $pageSubtitle = "Perbarui data penulis";
 </head>
 
 <body>
-  <?php
-  $author = [
-    "id" => 1,
-    "name" => "Andrea Hirata",
-    "bio" => "Penulis asal Belitung, dikenal lewat novel Laskar Pelangi.",
-  ];
-  ?>
   <div class="app-shell">
       <?php include_once "../../components/Landing/sidebar.php"; ?>
 
