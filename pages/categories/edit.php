@@ -1,6 +1,8 @@
 <?php 
 $pageTitle = "Edit Kategori";
 $pageSubtitle = "Perbarui data kategori";
+require_once "../../repositories/category-repository.php";
+$category = getCategory();
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -11,13 +13,6 @@ $pageSubtitle = "Perbarui data kategori";
   <link rel="stylesheet" href="../../styles/categories/edit.css">
 </head>
 <body>
-  <?php
-  $category = [
-      "id"          => 1,
-      "name"        => "Fiksi",
-      "description" => "Novel dan cerita rekaan",
-  ];
-  ?>
   <div class="app-shell">
     <?php include_once "../../components/Landing/sidebar.php"; ?>
 
@@ -25,7 +20,7 @@ $pageSubtitle = "Perbarui data kategori";
       <?php include_once "../../components/Landing/topbar.php"; ?>
 
       <div class="app-content">
-        <form method="" action="">
+        <form method="POST" action="../../actions/categories/update.php">
           <input type="hidden" name="id" value="<?= $category['id'] ?>">
           <div class="form-card">
             <div class="form-section-title">Data Kategori</div>
@@ -40,7 +35,7 @@ $pageSubtitle = "Perbarui data kategori";
 
             <div class="form-actions">
               <a href="index.php" class="btn btn-outline">Batal</a>
-              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+              <button name="update" type="submit" class="btn btn-primary">Simpan Perubahan</button>
             </div>
           </div>
         </form>
