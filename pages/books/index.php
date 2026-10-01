@@ -1,4 +1,7 @@
-<?php require_once __DIR__ . '/../../repositories/book-repository.php'; ?>
+<?php require_once __DIR__ . '/../../repositories/book-repository.php';  
+$pagetitle = "Manajemen Buku";
+$pagedescription = "Kelola data buku, kategori, dan penulis";
+?>
 <!DOCTYPE html>
 <html lang="id">
 
@@ -12,9 +15,11 @@
 <body>
 
   <div class="app-shell">
+      <?php include_once "../../components/Landing/sidebar.php"; ?>
 
     <main class="app-main">
-   
+      <?php include_once "../../components/Landing/topbar.php"; ?>
+
       <div class="app-content">
         <div class="toolbar">
           <form method="" action="" class="toolbar-filters">
