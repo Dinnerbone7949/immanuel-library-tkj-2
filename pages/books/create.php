@@ -1,6 +1,10 @@
 <?php 
 $pageTitle = "Tambah Buku";
 $pageSubtitle = "Lengkapi data buku, kategori, dan penulis";
+require_once "../../repositories/category-repository.php";
+require_once "../../repositories/author-repository.php";
+$categories = getcategories();
+$authors = getauthors();
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -11,11 +15,7 @@ $pageSubtitle = "Lengkapi data buku, kategori, dan penulis";
   <link rel="stylesheet" href="../../styles/books/create.css">
 </head>
 <body>
-  <?php
-  // Data kategori & penulis dummy untuk mengisi dropdown/checkbox di form
-  $categories = ["Fiksi", "Sains", "Sejarah", "Teknologi"];
-  $authors = ["Andrea Hirata", "Tere Liye", "J.K. Rowling", "Pramoedya Ananta Toer", "Sapardi Djoko Damono"];
-  ?>
+
   <div class="app-shell">
     <?php include_once "../../components/Landing/sidebar.php"; ?>
 
@@ -49,7 +49,7 @@ $pageSubtitle = "Lengkapi data buku, kategori, dan penulis";
                 <label for="category_id">Kategori</label>
                 <select id="category_id" name="category_id">
                   <?php foreach ($categories as $index => $category): ?>
-                    <option value="<?= $index + 1 ?>"><?= $category ?></option>
+                    <option value="<?= $index + 1 ?>"><?= $category['name'] ?></option>
                   <?php endforeach; ?>
                 </select>
               </div>
@@ -65,10 +65,10 @@ $pageSubtitle = "Lengkapi data buku, kategori, dan penulis";
             <div class="form-group">
               <label>Pilih Penulis (bisa lebih dari satu)</label>
               <div class="checkbox-grid">
-                <?php foreach ($authors as $index => $authorName): ?>
+                <?php foreach ($authors as $index => $author): ?>
                   <label class="checkbox-item">
                     <input type="checkbox" name="author_ids[]" value="<?= $index + 1 ?>">
-                    <?= $authorName ?>
+                    <?= $author['name'] ?>
                   </label>
                 <?php endforeach; ?>
               </div>
