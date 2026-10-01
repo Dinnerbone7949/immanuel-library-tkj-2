@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/../../repositories/book-repository.php'; ?>z
+<?php require_once __DIR__ . '/../../repositories/book-repository.php'; ?>
 
 <!DOCTYPE html>
 <html lang="id">
@@ -15,8 +15,7 @@
   <div class="app-shell">
 
     <main class="app-main">
-
-
+   
       <div class="app-content">
         <div class="toolbar">
           <form method="" action="" class="toolbar-filters">
