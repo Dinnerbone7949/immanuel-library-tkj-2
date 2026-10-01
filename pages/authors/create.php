@@ -18,7 +18,7 @@ $pageSubtitle = "Daftarkan penulis baru ke sistem";
       <?php include_once "../../components/Landing/topbar.php"; ?>
 
       <div class="app-content">
-        <form method="" action="">
+        <form method="POST" action="../../actions/authors/store.php">
           <div class="form-card">
             <div class="form-section-title">Data Penulis</div>
             <div class="form-group">
@@ -31,7 +31,7 @@ $pageSubtitle = "Daftarkan penulis baru ke sistem";
             </div>
             <div class="form-actions">
               <a href="index.php" class="btn btn-outline">Batal</a>
-              <button type="submit" class="btn btn-primary">Simpan Penulis</button>
+              <button name="store" type="submit" class="btn btn-primary">Simpan Penulis</button>
             </div>
           </div>
         </form>
