@@ -15,8 +15,12 @@ $pageSubtitle = "Perbarui data buku, kategori, dan penulis";
   $categories = ["Fiksi", "Sains", "Sejarah", "Teknologi"];
   $authors = ["Andrea Hirata", "Tere Liye", "J.K. Rowling", "Pramoedya Ananta Toer", "Sapardi Djoko Damono"];
 
-  require_once "../../repositories/bookRepository.php";
-  $book = getBook();
+  $book = [
+      "id" => 5, "title" => "Antologi Rasa Nusantara", "isbn" => "978-602-1234-56-7",
+      "year" => 2021, "stock" => 4, "category_id" => 1,
+      "description" => "Kumpulan puisi dan cerita pendek dari berbagai penulis Nusantara.",
+      "author_ids" => [4, 5],
+  ];
   ?>
   <div class="app-shell">
     <?php include_once "../../components/Landing/sidebar.php"; ?>
