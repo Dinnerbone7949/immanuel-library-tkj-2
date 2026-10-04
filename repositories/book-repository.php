@@ -53,9 +53,9 @@ function getBook() {
     "isbn" => "978-602-1234-56-7",
     "year" => 2021,
     "stock" => 4,
-    "category" => "Fiksi",
+    "category_id" => 1,
     "description" => "Kumpulan puisi dan cerita pendek dari berbagai penulis Nusantara.",
-    "authors" => ["Pramoedya Ananta Toer", "Sapardi Djoko Damono"],
+    "author_ids" => [1, 2],
   ];
 
   return $book;
