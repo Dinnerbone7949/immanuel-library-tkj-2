@@ -16,10 +16,10 @@ $pageSubtitle = "Informasi lengkap buku beserta kategori dan penulis";
   $book = getBook();
   ?>
   <div class="app-shell">
-    <?php include_once "../../components/Landing/sidebar.php"; ?>
+    <?php include_once "../../components/landing/sidebar.php"; ?>
 
     <main class="app-main">
-      <?php include_once "../../components/Landing/topbar.php"; ?>
+      <?php include_once "../../components/landing/topbar.php"; ?>
 
       <div class="app-content">
         <div class="detail-grid">
