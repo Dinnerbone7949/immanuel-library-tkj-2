@@ -3,8 +3,8 @@ $pageTitle = "Tambah Buku";
 $pageSubtitle = "Lengkapi data buku, kategori, dan penulis";
 require_once "../../repositories/category-repository.php";
 require_once "../../repositories/author-repository.php";
-$categories = getcategories();
-$authors = getauthors();
+$categories = getCategories();
+$authors = getAuthors();
 ?>
 <!DOCTYPE html>
 <html lang="id">

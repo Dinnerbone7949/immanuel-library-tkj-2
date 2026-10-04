@@ -1,5 +1,8 @@
 <?php
-
-$id = $_GET['id'];
-
-echo "author id $id telah dihapus.";
+$id = isset($_GET['id']);
+if (isset($_GET['id'])) {
+    echo "penulis id $id telah dihapus.";
+}
+else {
+    echo "Tidak ada penulis yang dihapus.";
+}

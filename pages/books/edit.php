@@ -4,8 +4,8 @@ $pageSubtitle = "Perbarui data buku, kategori, dan penulis";
 require_once "../../repositories/category-repository.php";
 require_once "../../repositories/author-repository.php";
 require_once "../../repositories/book-repository.php";
-$categories = getcategories();
-$authors = getauthors();
+$categories = getCategories();
+$authors = getAuthors();
 $book = getBook();
 ?>
 <!DOCTYPE html>
