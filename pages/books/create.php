@@ -17,10 +17,10 @@ $authors = getauthors();
 <body>
 
   <div class="app-shell">
-    <?php include_once "../../components/landing/sidebar.php"; ?>
+    <?php include_once "../../components/admin/sidebar.php"; ?>
 
     <main class="app-main">
-      <?php include_once "../../components/landing/topbar.php"; ?>
+      <?php include_once "../../components/admin/topbar.php"; ?>
 
       <div class="app-content">
         <form method="POST" action="../../actions/books/store.php">
