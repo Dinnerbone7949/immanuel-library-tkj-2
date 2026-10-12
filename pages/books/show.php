@@ -1,7 +1,12 @@
-<?php 
+<?php
+require_once __DIR__ . "/../../repositories/book-repository.php";
+
+$book = getBook();
+
 $pageTitle = "Detail Buku";
 $pageSubtitle = "Informasi lengkap buku beserta kategori dan penulis";
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -11,15 +16,11 @@ $pageSubtitle = "Informasi lengkap buku beserta kategori dan penulis";
   <link rel="stylesheet" href="../../styles/books/show.css">
 </head>
 <body>
-  <?php
-  require '../../repositories/book-repository.php';
-  $book = getBook();
-  ?>
   <div class="app-shell">
-    <?php include_once "../../components/admin/sidebar.php"; ?>
+  <?php require_once __DIR__ . "/../../components/admin/sidebar.php" ?>
 
     <main class="app-main">
-      <?php include_once "../../components/admin/topbar.php"; ?>
+    <?php require_once __DIR__ . "/../../components/admin/topbar.php" ?>
 
       <div class="app-content">
         <div class="detail-grid">

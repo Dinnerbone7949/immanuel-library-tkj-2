@@ -1,9 +1,12 @@
-<?php 
+<?php
+require_once __DIR__ . "/../../repositories/user-repository.php";
+
+$user = getUser();
+
 $pageTitle = "Edit Pengguna";
 $pageSubtitle = "Perbarui data dan role pengguna";
-require_once "../../repositories/user-repository.php";
-$user = getUser();
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -14,10 +17,10 @@ $user = getUser();
 </head>
 <body>
   <div class="app-shell">
-    <?php include_once "../../components/admin/sidebar.php"; ?>
+  <?php require_once __DIR__ . "/../../components/admin/sidebar.php" ?>
 
     <main class="app-main">
-      <?php include_once "../../components/admin/topbar.php"; ?>
+    <?php require_once __DIR__ . "/../../components/admin/topbar.php" ?>
 
       <div class="app-content">
         <form method="POST" action="../../actions/users/update.php">
@@ -44,7 +47,7 @@ $user = getUser();
 
             <div class="form-actions">
               <a href="index.php" class="btn btn-outline">Batal</a>
-              <button name="update" type="submit" class="btn btn-primary">Simpan Perubahan</button>
+              <button type="submit" name="update" class="btn btn-primary">Simpan Perubahan</button>
             </div>
           </div>
         </form>

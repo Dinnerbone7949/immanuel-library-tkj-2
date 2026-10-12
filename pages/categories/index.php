@@ -1,9 +1,12 @@
-<?php 
+<?php
+require_once __DIR__ . "/../../repositories/category-repository.php";
+
+$categories = getCategories();
+
 $pageTitle = "Manajemen Kategori";
 $pageSubtitle = "Kelola kategori untuk mengelompokkan buku";
-require_once "../../repositories/category-repository.php";
-$categories = getCategories();
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -14,10 +17,10 @@ $categories = getCategories();
 </head>
 <body>
   <div class="app-shell">
-    <?php include_once "../../components/admin/sidebar.php"; ?>
+  <?php require_once __DIR__ . "/../../components/admin/sidebar.php" ?>
 
     <main class="app-main">
-      <?php include_once "../../components/admin/topbar.php"; ?>
+    <?php require_once __DIR__ . "/../../components/admin/topbar.php" ?>
 
       <div class="app-content">
         <div class="toolbar">
@@ -42,7 +45,7 @@ $categories = getCategories();
               </tr>
             </thead>
             <tbody>
-              <?php foreach($categories as $index => $category):?>
+              <?php foreach ($categories as $category): ?>
                 <tr>
                   <td>
                     <div class="cell-primary">
@@ -55,7 +58,8 @@ $categories = getCategories();
                   <td>
                     <div class="cell-actions">
                       <a href="edit.php?id=<?= $category['id'] ?>" class="btn btn-outline btn-sm">Edit</a>
-                      <a href="../../actions/categories/destroy.php?id=<?= $category['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda ingin menghapus kategori ini?')">Hapus</a>
+                      <a href="../../actions/categories/destroy.php?id=<?= $category['id'] ?>" class="btn btn-danger btn-sm"
+                        onclick="return confirm('Yakin ingin menghapus kategori ini?')">Hapus</a>
                     </div>
                   </td>
                 </tr>

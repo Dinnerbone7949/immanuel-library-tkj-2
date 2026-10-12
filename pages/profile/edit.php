@@ -1,10 +1,13 @@
-<?php 
-$pageTitle = "Profil Saya";
-$pageSubtitle = "Kelola data akun dan profil Anda";
-require_once "../../repositories/user-repository.php";
+<?php
+require_once __DIR__ . "/../../repositories/user-repository.php";
+
 $user = getUser();
 $profile = getProfile();
+
+$pageTitle = "Profil Saya";
+$pageSubtitle = "Kelola data akun dan profil Anda";
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -15,10 +18,10 @@ $profile = getProfile();
 </head>
 <body>
   <div class="app-shell">
-    <?php include_once "../../components/admin/sidebar.php"; ?>
+  <?php require_once __DIR__ . "/../../components/admin/sidebar.php" ?>
 
     <main class="app-main">
-      <?php include_once "../../components/admin/topbar.php"; ?>
+    <?php require_once __DIR__ . "/../../components/admin/topbar.php" ?>
 
       <div class="app-content">
         <form method="POST" action="../../actions/profile/update.php">
@@ -57,7 +60,7 @@ $profile = getProfile();
             </div>
             <div class="form-actions">
               <button type="button" class="btn btn-outline">Batal</button>
-              <button name="update" type="submit" class="btn btn-primary">Simpan Perubahan</button>
+              <button type="submit" name="update" class="btn btn-primary">Simpan Perubahan</button>
             </div>
           </div>
         </form>

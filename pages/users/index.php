@@ -1,9 +1,12 @@
-<?php 
+<?php
+require_once __DIR__ . "/../../repositories/user-repository.php";
+
+$users = getUsers();
+
 $pageTitle = "Manajemen Pengguna";
 $pageSubtitle = "Daftar seluruh pengguna beserta perannya (role)";
-require_once "../../repositories/user-repository.php";
-$users = getUsers();
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -14,10 +17,10 @@ $users = getUsers();
 </head>
 <body>
   <div class="app-shell">
-    <?php include_once "../../components/admin/sidebar.php"; ?>
+  <?php require_once __DIR__ . "/../../components/admin/sidebar.php" ?>
 
     <main class="app-main">
-      <?php include_once "../../components/admin/topbar.php"; ?>
+    <?php require_once __DIR__ . "/../../components/admin/topbar.php" ?>
 
       <div class="app-content">
         <div class="toolbar">
@@ -42,7 +45,7 @@ $users = getUsers();
               </tr>
             </thead>
             <tbody>
-              <?php foreach($users as $index => $user): ?>
+              <?php foreach ($users as $user): ?>
                 <tr>
                   <td>
                     <div class="cell-primary">
@@ -58,14 +61,15 @@ $users = getUsers();
                       <span class="badge badge-member">Member</span>
                     <?php endif; ?>
                   </td>
-                  <td>  
+                  <td>
                     <div class="cell-actions">
                       <a href="edit.php?id=<?= $user['id'] ?>" class="btn btn-outline btn-sm">Edit</a>
-                      <a href="../../actions/users/destroy.php?id=<?= $user['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda ingin menghapus user ini?')">Hapus</a>
+                      <a href="../../actions/users/destroy.php?id=<?= $user['id'] ?>" class="btn btn-danger btn-sm"
+                        onclick="return confirm('Yakin ingin menghapus pengguna ini?')">Hapus</a>
                     </div>
                   </td>
                 </tr>
-              <?php endforeach; ?>
+              <?php endforeach ?>
             </tbody>
           </table>
         </div>

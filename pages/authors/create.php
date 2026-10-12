@@ -1,7 +1,8 @@
-<?php 
+<?php
 $pageTitle = "Tambah Penulis";
 $pageSubtitle = "Daftarkan penulis baru ke sistem";
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -12,10 +13,10 @@ $pageSubtitle = "Daftarkan penulis baru ke sistem";
 </head>
 <body>
   <div class="app-shell">
-    <?php include_once "../../components/admin/sidebar.php"; ?>
+  <?php require_once __DIR__ . "/../../components/admin/sidebar.php" ?>
 
     <main class="app-main">
-      <?php include_once "../../components/admin/topbar.php"; ?>
+    <?php require_once __DIR__ . "/../../components/admin/topbar.php" ?>
 
       <div class="app-content">
         <form method="POST" action="../../actions/authors/store.php">
@@ -31,7 +32,7 @@ $pageSubtitle = "Daftarkan penulis baru ke sistem";
             </div>
             <div class="form-actions">
               <a href="index.php" class="btn btn-outline">Batal</a>
-              <button name="store" type="submit" class="btn btn-primary">Simpan Penulis</button>
+              <button type="submit" name="store" class="btn btn-primary">Simpan Penulis</button>
             </div>
           </div>
         </form>

@@ -1,5 +1,6 @@
 <?php
-$title = "Beranda - Perpustakaan immanuel";
+$title = "Beranda - Immanuel Library";
+
 ?>
 
 <!DOCTYPE html>
@@ -9,13 +10,13 @@ $title = "Beranda - Perpustakaan immanuel";
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
-    <?= $title; ?>
+    <?= $title ?>
   </title>
   <link rel="stylesheet" href="styles/index.css">
 </head>
 
 <body>
-  <?php require_once './components/landing/header.php'; ?>
+  <?php require_once __DIR__ . "/components/landing/header.php" ?>
 
   <!-- ============ HERO ============ -->
   <section class="hero">
@@ -100,8 +101,9 @@ $title = "Beranda - Perpustakaan immanuel";
         <h3>Manajemen Pengguna</h3>
         <p>Setiap pengguna memiliki peran (admin/member) dan profil masing-masing.</p>
       </div>
-    </div>  
+    </div>
   </section>
-  <?php require_once 'components/landing/footer.php'; ?>
+  <?php require_once __DIR__ . "/components/landing/footer.php" ?>
 </body>
+
 </html>
