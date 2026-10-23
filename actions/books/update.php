@@ -49,7 +49,6 @@ if (isset($_POST['update']) && $_SERVER['REQUEST_METHOD'] === "POST") {
         $pdo->rollback();
         throw $e;
     }
-    print_r($_POST);
 }
 
 ?>
